@@ -1,7 +1,7 @@
 { stdenv }:
 
 stdenv.mkDerivation rec {
-  name = "example-package-${version}";
+  name = "cxcli-${version}";
   version = "1.0";
   src = ./.;
   buildPhase = "echo echo Hello World > example";
