@@ -9,26 +9,26 @@ system ? builtins.currentSystem
 }:
 let
   shaMap = {
-    i686-linux = "1ap1jj6g0hy7sksabl0a6xp51zvi10j4z6vh2ifphwvwdbwhhm4x";
-    x86_64-linux = "01zljy7hsmjqdavjmvjn14g13a8fn8r3rjpll8pfcb3rvq36nd93";
-    armv7l-linux = "1jx51bcmypjwwv6nlys17b9zgrzd5w03ijgql3z69dv9zdsih3aj";
-    aarch64-linux = "16mh6m1x8ibvdxbwfppxs7adb01n431cjwldrbplplzs0jpxqq9y";
-    x86_64-darwin = "1fbij6gigxkknmksh9h2qazvbg5hr60xgdm6rvxjr785jycxrdwy";
-    aarch64-darwin = "0y7ws9wqb8a28pgjm465ljxc04c56php3wh0c776q59bnxiknwna";
+    i686-linux = "006qfyzip72w3f6dnbk89mywc83imw7i8ys0fw7q32a1sid39d9l";
+    x86_64-linux = "02ksl5ff3r4g3w8ddb4rfb9jbyhjb516div79b22dwmizbf4i0a8";
+    armv7l-linux = "1yp48dkf4h77dkpq6kcp7q7s6prpw8rgz2ibnh4zlwmgsnpwkvhi";
+    aarch64-linux = "0l00ci6ymvmcdw5y5ip99c4f9bdxl97ym2kca75miard92f4j022";
+    x86_64-darwin = "12cfszp7w026ngcav7fx2xp9vgkbp18yfv8dzfx171k50z218p9k";
+    aarch64-darwin = "1s3frdp7cxqv8xihk8v5bvqr0ywhqr4jp73l6c1w26clk8y4zrl0";
   };
 
   urlMap = {
-    i686-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.169.0/cxcli_Linux_i386.tar.gz";
-    x86_64-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.169.0/cxcli_Linux_x86_64.tar.gz";
-    armv7l-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.169.0/cxcli_Linux_armv7.tar.gz";
-    aarch64-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.169.0/cxcli_Linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.169.0/cxcli_Darwin_x86_64.tar.gz";
-    aarch64-darwin = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.169.0/cxcli_Darwin_arm64.tar.gz";
+    i686-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.170.0/cxcli_Linux_i386.tar.gz";
+    x86_64-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.170.0/cxcli_Linux_x86_64.tar.gz";
+    armv7l-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.170.0/cxcli_Linux_armv7.tar.gz";
+    aarch64-linux = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.170.0/cxcli_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.170.0/cxcli_Darwin_x86_64.tar.gz";
+    aarch64-darwin = "https://github.com/xavidop/dialogflow-cx-cli/releases/download/v1.170.0/cxcli_Darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "cxcli";
-  version = "1.169.0";
+  version = "1.170.0";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
