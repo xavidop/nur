@@ -9,26 +9,26 @@
 let
   inherit (stdenvNoCC.hostPlatform) system;
   shaMap = {
-    i686-linux = "1nm73b8sylpshpx36hpvrdq6ycb00mn62z8gr7gp65vrhqzqrj6m";
-    x86_64-linux = "1bb2b5drg7dmgpmjmlcj3a9cib9sh95cndv5ir10iadxlx458waz";
-    armv7l-linux = "16414q98fl9njb0cwyc0hzgv31a54nhnz55kc0fh8fj6y13r2hvj";
-    aarch64-linux = "0advksfsji726j2wf9ii6l9mfl9khx4yip480ixiz1y2l9jback5";
-    x86_64-darwin = "0ns6h1qcycph9y13jr6y2dkrqzxfcjy7h6kqyjlaz0qz6hv0j1li";
-    aarch64-darwin = "0lry0j3wrdvv1mdgmv2x0anzvhikzwwlqdgi3s1as0qlpvqvzkja";
+    i686-linux = "12c5483rj2xrra1mlx9qxsl4vpq28di0q4h0hqslhdgkg7f5js3h";
+    x86_64-linux = "0777jfrmb5d3zwz4x2x5my4lxlh44my1s4hwr7lwi85d6335mc0l";
+    armv7l-linux = "1cfvzibmgrnf6jy5csvm8a1mqjyf37h0pm15s5w0113qvjx3xgiw";
+    aarch64-linux = "0p4j1dz6k71d0xmxzmlsd6ank6vlf9x7q1fy63v6l9xjqi5mv003";
+    x86_64-darwin = "1v48zjv0xd98jqizil6aznkw81p8shn54cnr85xnvplyix0ds884";
+    aarch64-darwin = "16b59v1p3swaf95a3vsmqxxk39by8552j11jyam5rdm3dr60v6l8";
   };
 
   urlMap = {
-    i686-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.30.0/voiceflow_Linux_i386.tar.gz";
-    x86_64-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.30.0/voiceflow_Linux_x86_64.tar.gz";
-    armv7l-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.30.0/voiceflow_Linux_armv7.tar.gz";
-    aarch64-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.30.0/voiceflow_Linux_arm64.tar.gz";
-    x86_64-darwin = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.30.0/voiceflow_Darwin_x86_64.tar.gz";
-    aarch64-darwin = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.30.0/voiceflow_Darwin_arm64.tar.gz";
+    i686-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.31.1/voiceflow_Linux_i386.tar.gz";
+    x86_64-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.31.1/voiceflow_Linux_x86_64.tar.gz";
+    armv7l-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.31.1/voiceflow_Linux_armv7.tar.gz";
+    aarch64-linux = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.31.1/voiceflow_Linux_arm64.tar.gz";
+    x86_64-darwin = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.31.1/voiceflow_Darwin_x86_64.tar.gz";
+    aarch64-darwin = "https://github.com/xavidop/voiceflow-cli/releases/download/v1.31.1/voiceflow_Darwin_arm64.tar.gz";
   };
 in
 stdenvNoCC.mkDerivation {
   pname = "voiceflow";
-  version = "1.30.0";
+  version = "1.31.1";
   src = fetchurl {
     url = urlMap.${system};
     sha256 = shaMap.${system};
